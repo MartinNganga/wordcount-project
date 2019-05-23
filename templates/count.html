@@ -1,0 +1,14 @@
+<h1>There are {{ count }} words in your text</h1>
+<a href="{% url 'home' %}">Count More Text</a>
+<br></br>
+<h1>Your Text:</h1>
+<br></br>
+{{ fulltext }}
+<br></br>
+<h1>Word Count:</h1>
+<h4>Word : Occurences</h4>
+{% for word, count in  wordcounts %}
+
+{{ word }} : {{ count }}
+<br></br>
+{% endfor %}
